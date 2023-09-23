@@ -2,6 +2,8 @@
 
 数字图像处理实验作业
 
+要求见 https://docs.qq.com/doc/DU0NKZU55VmhLQ3lJ?dver=
+
 ## 目录结构
 
 Try:
@@ -21,6 +23,7 @@ DIP-Projects
 │   │   ├── video..
 │   │   └── image..
 │   ├── presentation.pptx
+│   ├── report-coedit.md
 │   ├── report-XXX-2130XXXX.md
 │   ├── report-XXX-2130XXXX.md
 │   └── report-XXX-2130XXXX.md
