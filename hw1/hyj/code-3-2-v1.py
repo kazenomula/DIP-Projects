@@ -22,11 +22,11 @@ def histogram(img):
     return vals, count
 
 t0 = time.time()
-tmp0, count0 = histogram(img_gray)
+vals0, count0 = histogram(img_gray)
 t1 = time.time()
 print(f"TIME: histogram spent {t1-t0}s")
 
-plt.hist(tmp0, bins=256)  # 自动统计
+plt.hist(vals0, bins=256)  # 自动统计
 plt.title('histogram')
 plt.xlabel('grayscale')
 plt.ylabel('rate')
@@ -39,22 +39,22 @@ def histogram_equalization(img, count0):
         preSum0[i] = preSum0[i-1] + count0[i]
     pixels = w*h
 
-    tmp1 = []
+    vals1 = []
     for i in range(w):
         for j in range(h):
             r = img_gray[i][j]
             img_gray[i][j] = 255 * preSum0[r] / pixels
-            tmp1.append(img_gray[i][j])
+            vals1.append(img_gray[i][j])
     
-    return tmp1
+    return vals1
 
 
 t0 = time.time()
-tmp1 = histogram_equalization(img_gray, count0)
+vals1 = histogram_equalization(img_gray, count0)
 t1 = time.time()
 print(f"TIME: histogram eq spent {t1-t0}s")
 
-plt.hist(tmp1, bins=256)
+plt.hist(vals1, bins=256)
 plt.title('histogram')
 plt.xlabel('grayscale')
 plt.ylabel('rate')
